@@ -33,7 +33,7 @@
          sheetSlider.style.display = "none";
       } else {
          let itemCounter = 1;
-         sliders.array.forEach(slider => {
+         sliders.forEach(slider => {
             var inputField = document.createElement('input');
             inputField.id = 's' + itemCounter.toString();
             inputField.type = "radio";
@@ -46,7 +46,7 @@
          divContent.classList.add("sh_content");
          sheetSlider.appendChild(divContent);
          itemCounter = 0;
-         sliders.array.forEach(slider => {
+         sliders.forEach(slider => {
             var sliderDiv = document.createElement('div');
             sliderDiv.classList.add("sh_item");
             divContent.appendChild(sliderDiv);
