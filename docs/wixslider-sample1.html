@@ -23,8 +23,8 @@
    window.onmessage = function(event) {
       let sliderData = event.data;
       console.log(event.data);
-      let sliderCount = event.data.items.length;
-      let sliders = event.data.items;
+      let sliderCount = event.data.length;
+      let sliders = event.data;
 
       console.log("No of images:" + sliderCount);
       
