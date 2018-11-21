@@ -27,35 +27,40 @@
       let sliders = event.data.items;
 
       console.log("No of images:" + sliderCount);
-
+      
       let sheetSlider = document.getElementById("sheetSlider1");
-      let itemCounter = 1;
-      sliders.array.forEach(slider => {
-         var inputField = document.createElement('input');
-         inputField.id = 's' + itemCounter.toString();
-         inputField.type = "radio";
-         inputField.name = "slide" + itemCounter.toString();
-         sheetSlider.appendChild(inputField);
-         itemCounter++;
-      });
+      if (sliderCount === 0) {
+         sheetSlider.style.display = "none";
+      } else {
+         let itemCounter = 1;
+         sliders.array.forEach(slider => {
+            var inputField = document.createElement('input');
+            inputField.id = 's' + itemCounter.toString();
+            inputField.type = "radio";
+            inputField.name = "slide" + itemCounter.toString();
+            sheetSlider.appendChild(inputField);
+            itemCounter++;
+         });
 
-      var divContent = document.createElement('div');
-      divContent.classList.add("sh_content");
-      sheetSlider.appendChild(divContent);
-      itemCounter = 0;
-      sliders.array.forEach(slider => {
-         var sliderDiv = document.createElement('div');
-         sliderDiv.classList.add("sh_item");
-         divContent.appendChild(sliderDiv);
-         
-         var imageItem = document.createElement('image');
-         imageItem.setAttribute("src", slider.image );
-         divContent.appendChild(imageItem);
+         var divContent = document.createElement('div');
+         divContent.classList.add("sh_content");
+         sheetSlider.appendChild(divContent);
+         itemCounter = 0;
+         sliders.array.forEach(slider => {
+            var sliderDiv = document.createElement('div');
+            sliderDiv.classList.add("sh_item");
+            divContent.appendChild(sliderDiv);
+            
+            var imageItem = document.createElement('image');
+            imageItem.setAttribute("src", slider.image );
+            divContent.appendChild(imageItem);
 
-         
-      });
-
+            
+         });
+         //sheetSlider.style.display = "none";
+      }
    };
+   console.log("Done!");
 </script>
 <body>
 
@@ -85,7 +90,7 @@
          <img src="https://unsplash.it/1280/720?image=618" alt="imgText"/>
          
       </div> -->
-      
+
    </div><!-- .sh__content -->
 
    
