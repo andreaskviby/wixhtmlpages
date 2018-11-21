@@ -21,10 +21,10 @@
 </head>
 <script>
    window.onmessage = function(event) {
-      let sliderData = event.data;
-      console.log(event.data);
-      let sliderCount = event.data.length;
       let sliders = event.data;
+      console.log(sliders);
+      let sliderCount = sliders.length;
+      
 
       console.log("No of images:" + sliderCount);
       
