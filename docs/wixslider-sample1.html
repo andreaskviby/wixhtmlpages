@@ -5,7 +5,7 @@
       
          var randomUrlToAppend = (Date.now() + Math.random()).toString();
          function setupRefresh() {
-           setTimeout("refreshPage();", 100); // milliseconds
+           setTimeout("refreshPage();", 500); // milliseconds
          }
          function refreshPage() {
             window.location = location.href + "?cacheKiller=" + randomUrlToAppend;
@@ -14,7 +14,7 @@
    </head>
    <body>
       <h1>wixshow.com </h1>
-      <p>just updated this page, <code>v2.5</code> javascript refresh method</p>
+      <p>just updated this page, <code>v2.6</code> javascript refresh method</p>
       
    </body>
 </html>
