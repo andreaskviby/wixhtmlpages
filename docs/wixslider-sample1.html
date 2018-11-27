@@ -8,11 +8,12 @@
       <script type="text/javascript">
          window.onload = setupRefresh;
       
+         var randomUrlToAppend = (Date.now() + Math.random()).toString();
          function setupRefresh() {
            setTimeout("refreshPage();", 100); // milliseconds
          }
          function refreshPage() {
-            window.location = location.href;
+            window.location = location.href + "?cacheKiller=" + randomUrlToAppend;
          }
        </script>
    </head>
