@@ -13,9 +13,6 @@
       myList = [];
     }
   };
-    
-
-// Builds the HTML Table out of myList json data from Ivy restful service.
  function buildHtmlTable() {
      var columns = addAllColumnHeaders(myList);
  
@@ -33,10 +30,6 @@
      }
      return exportF(); // Make Excel file download now
  }
- 
- // Adds a header row to the table and returns the set of columns.
- // Need to do union of keys from all records as some records may not contain
- // all records
  function addAllColumnHeaders(myList)
  {
      var columnSet = [];
@@ -56,16 +49,13 @@
      return columnSet;
  }
  function exportF() {
-  //Format your table with form data
-  //document.getElementById("input").innerHTML = document.getElementById("text").value;
-
   var table = document.getElementById("excelDataTable");
   var html = table.outerHTML;
 
-  var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
+  var url = 'data:application/vnd.ms-excel,' + escape(html);
   var link = document.getElementById("downloadLink");
   link.setAttribute("href", url);
-  link.setAttribute("download", "export.xls"); // Choose the file name
+  link.setAttribute("download", "export.xls"); // Choose the file name here
   link.click(); // Download your excel file   
   return false;
 }
