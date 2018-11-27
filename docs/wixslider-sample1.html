@@ -5,9 +5,20 @@
       <meta http-Equiv="Pragma" Content="no-cache" />
       <meta http-Equiv="Expires" Content="-1" />
       
+      <script type="text/javascript">
+         window.onload = setupRefresh;
+      
+         function setupRefresh() {
+           setTimeout("refreshPage();", 100); // milliseconds
+         }
+         function refreshPage() {
+            window.location = location.href;
+         }
+       </script>
    </head>
+   
    <body>
-      <h1>wixshow.com just updated this page, v2.1</h1>
+      <h1>wixshow.com just updated this page, v2.2 javascript refresh method</h1>
       
    </body>
 </html>
