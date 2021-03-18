@@ -56,7 +56,8 @@
   var link = document.getElementById("downloadLink");
   link.setAttribute("href", url);
   link.setAttribute("download", "export.xls"); // Choose the file name here
-  link.click(); // Download your excel file   
+  link.click(); // Download your excel file 
+  table.innerHTML = '';
   return false;
 }
  </script>
